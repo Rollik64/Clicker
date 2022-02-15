@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Clicker</title>
+
+    <!-- JS скприпт -->
+    <script>
+        var counterVal = 0;
+    <!-- функция, которая увеличивает наш счетчик при вызове -->
+    function incrementClick() {
+        updateDisplay(++counterVal);
+    }
+    <!-- функция, выводящая новое значение счетчика в тело HTML -->
+    function updateDisplay(val) {
+        document.getElementById("counter-label").innerHTML = val;
+    }
+    </script>
+</head>
+<body>
+    <!-- Соответственно сам счетчик и кнопка -->
+<p id="counter-label">0</p>
+<button type="button" onclick="incrementClick()">Click me</button>
+
+</body>
+</html>
