@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Clicker</title>
 
-    <!-- JS скприпт -->
+    <!-- JS скрипт -->
     <script>
         var counterVal = 0;
     <!-- функция, которая увеличивает наш счетчик при вызове -->
@@ -19,8 +19,10 @@
 </head>
 <body>
     <!-- Соответственно сам счетчик и кнопка -->
-<p id="counter-label">0</p>
+<p id="counter-label">${name}</p>
 <button type="button" onclick="incrementClick()">Click me</button>
 
-</body>
-</html>
+    <!-- <h2 th:utext="${countDB}">..!..</h2> -->
+
+  </body>
+  </html>

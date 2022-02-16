@@ -1,5 +1,7 @@
 package com.example.clicker.Controller;
 
+import com.example.clicker.DB.TestDB;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,16 +14,19 @@ public class ClickController {
 
     //Контроллер, который при запросе адреса выдает наш шаблон HTML
     @RequestMapping(value = "/")
-    public String helloWorldController(@RequestParam(name = "counter-label", required = false) String name, Model model) {
+    public String helloWorldController(@RequestParam(name = "0", required = false) String name, Model model) {
         model.addAttribute("counter-label", name);
         return "helloClick";
     }
 
-    /*
-    @PostMapping(value = "/")
-    public String byeWorldController(@RequestParam(name = "counter-label", required = false) String name, Model model) {
-        Integer.parseInt(name);
-        name++;
-        return name;
-    } */
+
+
+/*
+    @RequestMapping(value = "/")
+    public String byeWorldController(Model model) {
+        TestDB test = new TestDB();
+        model.addAttribute("0", test);
+        return "helloClick";
+    }
+*/
 }
