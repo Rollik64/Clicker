@@ -21,11 +21,9 @@ public class ClickController {
         return "helloClick";
     }
 
-
     @PostMapping(value = "/")
-    public String byeWorldController(Model model) {
-        TestDB test = new TestDB();
-        model.addAttribute("0", test);
-        return "helloClick";
+    public void print (TestDB test, Model model) {
+        //model.getAttribute("message");
+        System.out.println(model.getAttribute("message"));
     }
 }
