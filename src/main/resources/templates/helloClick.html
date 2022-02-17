@@ -7,6 +7,8 @@
     <!-- JS скрипт -->
     <script th:inline="javascript">
         var counterVal = [[${message}]];
+    <!-- Получаем переменную счетчика в JS скрипт -->
+
     <!-- функция, которая увеличивает наш счетчик при вызове -->
     function incrementClick() {
         updateDisplay(++counterVal);

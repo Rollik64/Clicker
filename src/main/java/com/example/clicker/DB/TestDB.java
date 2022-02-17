@@ -2,7 +2,7 @@ package com.example.clicker.DB;
 
 
 public class TestDB {
-    private int countDB = 8;
+    private int countDB;
 
     public TestDB() {
     }
