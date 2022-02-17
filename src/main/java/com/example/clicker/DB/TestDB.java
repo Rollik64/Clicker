@@ -2,20 +2,20 @@ package com.example.clicker.DB;
 
 
 public class TestDB {
-    private String countDB;
+    private int countDB = 8;
 
     public TestDB() {
     }
 
-    public TestDB(String countDB) {
+    public TestDB(int countDB) {
         this.countDB = countDB;
     }
 
-    public String getCountDB() {
+    public int getCountDB() {
         return countDB;
     }
 
-    public void setCountDB(String countDB) {
+    public void setCountDB(int countDB) {
         this.countDB = countDB;
     }
 }

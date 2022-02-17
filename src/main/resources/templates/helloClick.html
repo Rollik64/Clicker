@@ -5,8 +5,8 @@
     <title>Clicker</title>
 
     <!-- JS скрипт -->
-    <script>
-        var counterVal = 0;
+    <script th:inline="javascript">
+        var counterVal = [[${message}]];
     <!-- функция, которая увеличивает наш счетчик при вызове -->
     function incrementClick() {
         updateDisplay(++counterVal);
@@ -19,10 +19,9 @@
 </head>
 <body>
     <!-- Соответственно сам счетчик и кнопка -->
-<p id="counter-label">${name}</p>
+    <!-- С помощью тега Thymeleaf получаем переменную из контроллера -->
+<p id="counter-label" th:utext="${message}">...</p>
 <button type="button" onclick="incrementClick()">Click me</button>
-
-    <!-- <h2 th:utext="${countDB}">..!..</h2> -->
 
   </body>
   </html>
