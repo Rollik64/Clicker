@@ -1,13 +1,13 @@
-package com.example.clicker.DB;
+package com.example.clicker.Model;
 
 
-public class TestDB {
+public class Count {
     private int countDB;
 
-    public TestDB() {
+    public Count() {
     }
 
-    public TestDB(int countDB) {
+    public Count(int countDB) {
         this.countDB = countDB;
     }
 
